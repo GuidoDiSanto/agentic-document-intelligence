@@ -1,0 +1,48 @@
+
+# Strumento utilizzato per preparare l'installazione
+# del nostro progetto Python
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+# Informazioni generali sul progetto
+[project]
+
+# Nome con cui il progetto sarà identificato da pip
+name = "agentic-document-intelligence"
+
+# Versione attuale del nostro progetto
+version = "0.1.0"
+
+# Breve descrizione
+description = "Sistema AI per l'analisi documentale"
+
+# Versioni Python supportate
+requires-python = ">=3.11"
+
+# Librerie richieste dalla nostra applicazione
+dependencies = [
+    "fastapi==0.143.2",
+    "uvicorn",
+    "sqlmodel",
+    "pydantic",
+    "pymupdf==1.26.7",
+    "python-multipart",
+    "numpy<2",
+    "torch==2.2.2",
+    "transformers==4.41.2",
+    "tokenizers==0.19.1",
+    "sentence-transformers==2.7.0"
+]
+
+# Dipendenze aggiuntive utilizzate durante lo sviluppo
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "httpx"
+]
+
+# Indichiamo quali package Python includere
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["app*"]
