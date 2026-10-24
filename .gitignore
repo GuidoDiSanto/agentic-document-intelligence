@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Virtual environment
+agentic_intelligence/
+.venv/
+
+# Databases
+*.db
+*.db-*
+*.sqlite
+*.sqlite3
+
+# Private files and API keys
+.env
+.env.*
+!.env.example
+
+# User uploads
+data/uploads/
+
+# Local caches and models
+.cache/
+models/
+
+# Experimental Python scripts
+app/prova_*.py
+
+# macOS
+.DS_Store
